@@ -2,8 +2,6 @@ import win32gui,win32con,win32com.client
 import pyautogui
 import time
 
-import win32gui
-import win32con
 
 def windowEnumHandler(hwnd, top_windows):
     top_windows.append((hwnd, win32gui.GetWindowText(hwnd)))
@@ -21,7 +19,7 @@ def bringToFront(window_name):
 
 # Test with notepad
 if __name__ == "__main__":
-    winname = "chrome"
+    winname = "notepad"
     bringToFront(winname)
 
 
