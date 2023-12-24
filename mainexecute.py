@@ -54,6 +54,13 @@ def start_server():
                                cwd = r"C:\Users\duong\Documents\autostart\virtual-assistant\Store-django")
     return process
 
+def start_client():
+    """start the screen control process"""
+    command = "python client.py"
+    process = subprocess.Popen(command,
+                               shell=True,
+                               cwd = r"C:\Users\duong\Documents\autostart\virtual-assistant")
+    return process
 
 def start_screen_control():
     """start the screen control process"""
@@ -66,3 +73,4 @@ def start_screen_control():
 
 start_screen_control()
 start_server()
+start_client()
